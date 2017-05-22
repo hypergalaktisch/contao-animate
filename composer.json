@@ -1,0 +1,34 @@
+{
+  "name": "hypergalaktisch/contao-animate",
+  "description": "Add animate.css effects for content elements",
+  "keywords": ["contao", "animate", "css-animation"],
+  "type": "contao-module",
+  "homepage": "https://github.com/hypergalaktisch/contao-animate",
+  "license": "LGPL-3.0+",
+  "authors": [{
+    "name": "hypergalaktisch",
+    "email": "info@hypergalaktisch.com",
+    "homepage": "http://hypergalaktisch.com",
+    "role": "Developer"
+  }],
+  "support": {
+    "issues": "https://github.com/hypergalaktisch/contao-animate/issues"
+  },
+  "require": {
+    "php": ">=5.3",
+    "contao/core": ">=3.1,<=4.0-dev",
+    "contao-community-alliance/composer-plugin": "~2.0"
+  },
+  "autoload": {
+    "classmap": [
+      "classes"
+    ]
+  },
+  "extra": {
+    "contao": {
+      "sources": {
+        "": "system/modules/xl-animate"
+      }
+    }
+  }
+}
