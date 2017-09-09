@@ -6,8 +6,9 @@
  * @license    LGPL-3.0+
  * @see	       https://github.com/hypergalaktisch/contao-animate
  */
-namespace hypergalaktisch\AnimateBundle\ContaoManager;
+namespace Hypergalaktisch\AnimateBundle\ContaoManager;
 
+use Hypergalaktisch\AnimateBundle\HypergalaktischAnimateBundle;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
@@ -25,9 +26,8 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create('hypergalaktisch\AnimateBundle\XlAnimateBundle')
+            BundleConfig::create(HypergalaktischAnimateBundle::class)
                 ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle'])
-                ->setReplace(['xl-animate']),
         ];
     }
 }
