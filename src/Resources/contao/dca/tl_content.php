@@ -1,4 +1,11 @@
 <?php
+/**
+ * @copyright  Georg Jaedicke
+ * @author     Georg Jaedicke (hypergalaktisch)
+ * @package    Animate
+ * @license    LGPL-3.0+
+ * @see	       https://github.com/hypergalaktisch/contao-animate
+ */
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'xlAnimateAdd';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['headline'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['headline']);
