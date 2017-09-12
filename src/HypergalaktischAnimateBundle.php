@@ -9,6 +9,8 @@
 
 namespace Hypergalaktisch\AnimateBundle;
 
+use Hypergalaktisch\AnimateBundle\DependencyInjection\HypergalaktischAnimateExtension;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
