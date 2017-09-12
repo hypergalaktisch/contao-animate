@@ -1,0 +1,3 @@
+hypergalaktisch_contao-animate:
+    resource: "@HypergalaktischAnimateBundle/Controller/"
+    type:     annotation
