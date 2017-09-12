@@ -32,10 +32,10 @@ class HookListener
     /**
      * Extend content element
      *
-     * @param ContentElement $objElement
+     * @param $objElement
      * @param Sring $strBuffer
      */
-    public function getContentElement(ContentElement $objElement, $strBuffer)
+    public function getContentElement($objElement, $strBuffer)
     {
         $animation = '';
         if ($objElement->xlAnimateAdd) {
