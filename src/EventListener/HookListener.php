@@ -39,10 +39,12 @@ class HookListener
     {
         $animation = '';
         if ($objElement->xlAnimateAdd) {
-            $GLOBALS['TL_CSS']['xl-animate-animate-css'] = 'bundles/hypergalaktischanimate/css/animate.min.css|static';
-            $GLOBALS['TL_CSS']['xl-animate'] = 'bundles/hypergalaktischanimate/css/xl-animate.css|static';
-            $GLOBALS['TL_JQUERY']['xl-viewportchecker'] = '<script src="bundles/hypergalaktischanimate/js/viewportchecker.min.js"></script>';
-            $GLOBALS['TL_JQUERY']['xl-animate'] = '<script src="bundles/hypergalaktischanimate/js/animations.js"></script>';
+            if (TL_MODE == 'FE') {
+                $GLOBALS['TL_CSS']['xl-animate-animate-css'] = 'bundles/hypergalaktischanimate/css/animate.min.css';
+                $GLOBALS['TL_CSS']['xl-animate'] = 'bundles/hypergalaktischanimate/css/xl-animate.css';
+                $GLOBALS['TL_JQUERY']['xl-viewportchecker'] = '<script src="bundles/hypergalaktischanimate/js/viewportchecker.min.js"></script>';
+                $GLOBALS['TL_JQUERY']['xl-animate'] = '<script src="bundles/hypergalaktischanimate/js/animations.js"></script>';
+            }
             if ($objElement->xlAnimateEffect) {
                 $animation .= ' data-effect="' . $objElement->xlAnimateEffect . '"';
             }
