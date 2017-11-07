@@ -1,6 +1,6 @@
 function xlAnimations() {
     $('.xl-animate').each(function () {
-        if ($(this).hasClass("visible")) {
+        if ($(this).hasClass("animated-visible")) {
             var effect = "animated " + $(this).data("effect");
             var delay = $(this).data("delay");
             if (delay > 0) {
@@ -14,7 +14,10 @@ function xlAnimations() {
     });
 }
 $(document).ready(function () {
-    $('.xl-animate').viewportChecker();
+    $('.xl-animate').viewportChecker({
+        classToAdd: 'animated-visible'
+    });
+
     xlAnimations();
 });
 
