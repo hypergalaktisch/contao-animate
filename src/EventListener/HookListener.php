@@ -10,7 +10,6 @@
 namespace Hypergalaktisch\AnimateBundle\EventListener;
 
 use Contao\CoreBundle\Framework\ContaoFrameworkInterface;
-use Hypergalaktisch\AnimateBundle\Animate;
 
 class HookListener
 {
