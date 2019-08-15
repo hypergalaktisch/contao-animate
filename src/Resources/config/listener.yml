@@ -1,5 +1,6 @@
 services:
     hypergalaktisch_animate.listener.hooks:
         class: Hypergalaktisch\AnimateBundle\EventListener\HookListener
+        public: true
         arguments:
             - "@contao.framework"
