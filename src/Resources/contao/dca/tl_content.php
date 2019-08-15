@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @copyright  Georg Jaedicke
  * @author     Georg Jaedicke (hypergalaktisch)
@@ -8,17 +9,21 @@
  */
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'xlAnimateAdd';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['headline'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['headline']);
-$GLOBALS['TL_DCA']['tl_content']['palettes']['text'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['text']);
-$GLOBALS['TL_DCA']['tl_content']['palettes']['html'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['html']);
-$GLOBALS['TL_DCA']['tl_content']['palettes']['list'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['list']);
-$GLOBALS['TL_DCA']['tl_content']['palettes']['table'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['table']);
-$GLOBALS['TL_DCA']['tl_content']['palettes']['hyperlink'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['hyperlink']);
-$GLOBALS['TL_DCA']['tl_content']['palettes']['toplink'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['toplink']);
-$GLOBALS['TL_DCA']['tl_content']['palettes']['image'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['image']);
-$GLOBALS['TL_DCA']['tl_content']['palettes']['download'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['download']);
-$GLOBALS['TL_DCA']['tl_content']['palettes']['downloads'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['downloads']);
-$GLOBALS['TL_DCA']['tl_content']['palettes']['form'] = str_replace('{protected_legend:hide}', '{xlAnimate_legend:hide},xlAnimateAdd;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes']['form']);
+
+Contao\CoreBundle\DataContainer\PaletteManipulator::create()
+    ->addLegend('xlAnimate_legend', 'protected_legend', Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_BEFORE, true)
+    ->addField('xlAnimateAdd', 'xlAnimate_legend', Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_APPEND)
+    ->applyToPalette('headline', 'tl_content')
+    ->applyToPalette('text', 'tl_content')
+    ->applyToPalette('html', 'tl_content')
+    ->applyToPalette('list', 'tl_content')
+    ->applyToPalette('table', 'tl_content')
+    ->applyToPalette('hyperlink', 'tl_content')
+    ->applyToPalette('toplink', 'tl_content')
+    ->applyToPalette('image', 'tl_content')
+    ->applyToPalette('download', 'tl_content')
+    ->applyToPalette('downloads', 'tl_content')
+    ->applyToPalette('form', 'tl_content');
 
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['xlAnimateAdd'] = 'xlAnimateEffect,xlAnimateEffectDelay';
 
